@@ -97,6 +97,123 @@ const router = createBrowserRouter([
     path: "*",
     element: <div>404 Not Found</div>,
   },
+  {
+    path: "/about",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/contact",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/careers",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/payments",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/shipping",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/cancellation",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/return",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/terms",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
+  {
+    path: "/privacy",
+    element: (
+      <Route>
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">
+            This Feature is not available for now, it is comming Soon InshaAllah
+            🔜
+          </h1>
+        </div>
+      </Route>
+    ),
+  },
 ]);
 
 export default function Router() {

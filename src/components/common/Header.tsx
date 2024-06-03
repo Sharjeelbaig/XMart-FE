@@ -1,3 +1,9 @@
+import {
+  Menu,
+  MenuHandler,
+  MenuItem,
+  MenuList,
+} from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 
 interface Link {
@@ -29,6 +35,10 @@ export default function Header({
   profile,
 }: HeaderProps) {
   const navigate = useNavigate();
+  const handleLogout = () => {
+    window.location.href = "/login";
+    localStorage.removeItem("user");
+  };
   return (
     <div
       ref={headerRef}
@@ -45,11 +55,30 @@ export default function Header({
         {showProfile && (
           <div className="w-fit  flex flex-col items-center justify-between">
             <div className="flex gap-x-5 items-center justify-center">
-              <img
-                src={profile?.profilePicture}
-                alt="profile"
-                className="w-10 h-10 rounded-full mr-2"
-              />
+              <Menu>
+                <MenuHandler>
+                  <img
+                    src={profile?.profilePicture}
+                    alt="profile"
+                    className="w-10 h-10 rounded-full mr-2"
+                  />
+                </MenuHandler>
+                <MenuList
+                  className="m-2"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                >
+                  <MenuItem
+                    onClick={handleLogout}
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                  >
+                    Log out
+                  </MenuItem>
+                </MenuList>
+              </Menu>
               <div>
                 <div className="text-lg font-light">{profile?.name}</div>
                 <div className="text-xs font-light">{profile?.email}</div>

@@ -27,7 +27,9 @@ export default function Footer({
       }
     }
   }, [collapsed]);
-
+  const handleSubscribe = () => {
+    alert("InshaAllah, Feature is comming soon 🔜");
+  };
   return (
     <>
       <div className="-translate-y-10">
@@ -76,7 +78,12 @@ export default function Footer({
               crossOrigin={undefined}
             />
 
-            <Button fullWidth text="Subscribe" severity="secondary" />
+            <Button
+              onClick={handleSubscribe}
+              fullWidth
+              text="Subscribe"
+              severity="secondary"
+            />
           </div>
           {/* links */}
           <div className="flex flex-wrap *:m-1">

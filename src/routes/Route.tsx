@@ -6,10 +6,22 @@ export default function Route({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLoggedIn() && window.location.pathname !== "/login") {
-      if (window.location.pathname !== "/register") {
-        window.location.href = "/login";
-      }
+    const allowedRoutes = [
+      "/login",
+      "/register",
+      "/about",
+      "/contact",
+      "/careers",
+      "/payments",
+      "/shipping",
+      "/cancellation",
+      "/return",
+      "/terms",
+      "/privacy",
+    ];
+
+    if (!isLoggedIn() && !allowedRoutes.includes(window.location.pathname)) {
+      navigate("/login");
     }
   }, [navigate, localStorage]);
   return <div className="h-full">{children}</div>;
